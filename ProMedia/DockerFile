@@ -1,0 +1,26 @@
+# ----- Build stage -----
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy solution and restore
+COPY ProMedia.sln .
+COPY ProMedia/ProMedia.csproj ProMedia/
+RUN dotnet restore ProMedia/ProMedia.csproj
+
+# Copy the full source and build
+COPY ProMedia/ ProMedia/
+WORKDIR /src/ProMedia
+RUN dotnet publish -c Release -o /app/publish
+
+# ----- Runtime stage -----
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+
+# Expose port 80 (default for ASP.NET Core)
+EXPOSE 80
+
+# Set environment variable for ASP.NET
+ENV ASPNETCORE_URLS=http://+:80
+
+ENTRYPOINT ["dotnet", "ProMedia.dll"]
