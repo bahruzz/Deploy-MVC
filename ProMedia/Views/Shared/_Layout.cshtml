@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="./assets/plugin/OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugin/OwlCarousel2-2.3.4/docs/assets/css/docs.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/icofont/icofont.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/icon/icofont@1.0.1-alpha.1/icofont.min.css" rel="stylesheet">
+   
+    @RenderSection("css", required: false)
+
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+    <title>ProMedia</title>
+</head>
+
+<body>
+
+    <!-- MenuHeader Start Part -->
+
+    <section id="menuHeader">
+        <div class="container">
+            <div class="row" id="upmenu">
+                <div class=" col-md-9  d-flex flex-row">
+                    <h6><i class="fad fa-phone-alt"></i> Call us: +44 458 7895</h6>
+                    <h6><i class="fas fa-map-marker-alt"></i> 210 Quadra Street Victoria, Canada</h6>
+                </div>
+                <div class=" col-md-3 ">
+                    <ul class="justify-content-end">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-linkedin"></i></li>
+                        <li><i class="fab fa-google-plus-g"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center" id="menu">
+                <div class="col-lg-3 col-6  ">
+                    <img id="logo" src="assets/images/logo.png" alt="">
+                </div>
+                <div class="col-lg-6 col-md-3 men">
+                    <ul>
+                        <li>
+                            <a class="yes" href="index.html">Home <i class="fas fa-sort-down"></i></a>
+                            <div class="dropdown-menu fourth">
+                                <a class="dropdown-item" href="index.html">Home Demo 1</a>
+                                <a class="dropdown-item" href="doctorMenu.html">Home Demo 2</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="DepartmentMenu.html">Departments <i class="fas fa-sort-down "></i></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="DepartmentMenu.html">Cardiology</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Gynecology</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Neurology</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Orthopedics</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Gastrology</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Pulmonology</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Laboratory</a>
+                                <a class="dropdown-item" href="DepartmentMenu.html">Urology</a>
+                            </div>
+
+
+                        </li>
+                        <li>
+                            <a href="#">Pages <i class="fas fa-sort-down"></i></a>
+                            <div class="dropdown-menu secont">
+                                <a class="dropdown-item" href="servicesMenu.html">Services</a>
+                                <a class="dropdown-item" href="doctorMenu.html">Our Doctor</a>
+                                <a class="dropdown-item" href="SingleDoctor.html">Single Doctor</a>
+                                <a class="dropdown-item" href="AppointmentMenu.html">Book Appoinment</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="#">Blog<i class="fas fa-sort-down"></i></a>
+                            <div class="dropdown-menu third">
+                                <a class="dropdown-item" href="Blog.html">Blog</a>
+                                <a class="dropdown-item" href="doctorMenu.html">Blog Single</a>
+                            </div>
+                        </li>
+                        <li><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 men">
+                    <button>
+                        <a href="AppointmentMenu.html">Make an Appointment</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="col-6  burgerMenu">
+                    <div class="burger">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsivlik Start Part -->
+        <div class="container">
+            <div class="navbar-container header-sticky    off" id="menu2">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="navbar-collapse collapse show" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item dropdown">
+                                <a id="bItem" class="nav-link yes" href="index.html" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                                <div class="dropdown-menu off" id="bMenu">
+                                    <a class="dropdown-item" href="index.html">Home Demo 1</a>
+                                    <a class="dropdown-item" href="doctorMenu.html">Home Demo 2</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a id="dItem" class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Departments
+                                </a>
+                                <div class="dropdown-menu off" id="dMenu">
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Cardiology</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Gynecology</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Neurology</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Orthopedics</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Gastrology</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Pulmonology</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Laboratory</a>
+                                    <a class="dropdown-item" href="DepartmentMenu.html">Urology</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a id="pItem" class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <div class="dropdown-menu off" id="pMenu">
+                                    <a class="dropdown-item" href="servicesMenu.html">Services</a>
+                                    <a class="dropdown-item" href="doctorMenu.html">Our Doctor</a>
+                                    <a class="dropdown-item" href="SingleDoctor.html">Single Doctor</a>
+                                    <a class="dropdown-item" href="AppointmentMenu.html">Book Appoinment</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a id="fItem" href="Blog.html" class="nav-link dropdown-toggle" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                <div class="dropdown-menu off" id="fMenu">
+                                    <a class="dropdown-item" href="Blog.html">Blog</a>
+                                    <a class="dropdown-item" href="doctorMenu.html">Blog Single</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="appointment-inline my-lg-0">
+                            <a href="AppointmentMenu.html" class="appointment-btn">
+                                Make an Appointment
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <!-- Responsivlik End Part -->
+    </section>
+    <!-- MenuHeader End Part -->
+    <!-- Carousel Start Part -->
+
+    <section id="header">
+        <div class="container-fluid">
+            <div id="owl-carousel" class="owl-carousel">
+                <div class="text-center">
+                    <div class="layer"></div>
+                    <img src="./assets/images/2.jpg" alt="">
+                    <h1>Best Care & Better <br> Doctor</h1>
+                </div>
+                <div class="text-center">
+                    <div class="layer"></div>
+                    <img src="./assets/images/3.jpg" alt="">
+                    <h1>We Always Care Your Health</h1>
+                </div>
+                <div class="text-center">
+                    <div class="layer"></div>
+                    <img src="./assets/images/1.jpg" alt="">
+                    <h1>We Always Care Your Health</h1>
+                </div>
+            </div>
+            <!-- <div class="owl-nav">
+                <button type="button" role="presentation" class="owl-prev">
+                    <i class="fas fa-chevron-double-left"></i>
+                </button>
+                <button type="button" role="presentation" class="owl-next">
+                    <i class="fas fa-chevron-double-right"></i>
+                </button>
+            </div> -->
+            <!-- <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <div class="layer"></div>
+                            <img src="./assets/images/2.jpg" alt="">
+                            <h1>Best Care & Better <br> Doctor</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <div class="layer"></div>
+                            <img src="./assets/images/3.jpg" alt="">
+                            <h1>We Always Care Your Health</h1>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <div class="layer"></div>
+                            <img src="./assets/images/1.jpg" alt="">
+                            <h1>We Always Care Your Health</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div> -->
+        </div>
+    </section>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="footer-widget">
+                <a href="#" class="footerlogo">
+                    <img src="./assets/images/logo.png" alt="Logo">
+                </a>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                    viverra maecenas accumsan lacus vel facilisis. </p>
+
+                <ul class="socials-links">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li> <i class="fab fa-twitter"></i></li>
+                    <li> <i class="fab fa-google-plus-g"></i></li>
+                    <li> <i class="fab fa-linkedin"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <div class="footer-widget">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctorMenu.html">Doctors</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-widget">
+                <h3>Departments</h3>
+                <ul>
+                    <li><a href="DepartmentMenu.html">Cardiology</a></li>
+                    <li><a href="DepartmentMenu.html">Neurology</a></li>
+                    <li><a href="DepartmentMenu.html">Orthopedics</a></li>
+                    <li><a href="DepartmentMenu.html">Radiology</a></li>
+                    <li><a href="DepartmentMenu.html">Surgery</a></li>
+                    <li><a href="DepartmentMenu.html">Urology</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="footer-widget">
+                <h3>Contact Us</h3>
+                <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+
+                <div class="foot-contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+1-604-555-5556 <br> +1-604-555-5556</p>
+                </div>
+
+                <div class="foot-contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@promedi.com <br> suport@promedi.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="separate-line"></div>
+
+    <div class="row bottom-footer">
+        <div class="col-md-6 col-lg-6">
+            <p>Copyright  2019, Promedi. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <ul>
+                <li><a href="#">Privac Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./assets/plugin/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</html>

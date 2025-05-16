@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  user-select: none;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+$mc: #396cf0;
+
+#toTop {
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 99;
+  display: none;
+  i {
+    background: $mc;
+    color: #ffffff;
+    display: inline-block;
+    height: 45px;
+    width: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 45px;
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 5px;
+    transition: 0.4s;
+  }
+}
+
+@import "menuHeader";
+@import "header";
+@import "Doctors";
+@import "aboutus";
+@import "center";
+@import "Departments"; 
+@import "prevideo";
+@import "video";
+@import "numbers";
+@import "Expert";
+@import "Appointment";
+@import "Feedback";
+@import "constantly";
+@import "News";
+@import "Newsletter";
+@import "footer";
+
+@import "header2";
+@import "welcome";
+@import "AppointmentMenu";
+@import "Blog";
+@import "Contact";
+.yes {
+  color: $mc !important;
+}
+
+.sticky {
+  margin: 0px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 10% !important;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  max-width: none !important;
+}
+
+.sticky2 {
+  margin: 0px !important;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  max-width: none !important;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  text-align: center;
+  .d-table {
+    width: 100%;
+    height: 100%;
+    .d-tablecell {
+      display: table-cell;
+      vertical-align: middle;
+      .lds-heart {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
+        transform-origin: 32px 32px;
+        div {
+          top: 23px;
+          left: 19px;
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          background: #396cf0;
+          animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+          &:before {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 26px;
+            height: 26px;
+            background: #396cf0;
+            left: -17px;
+            border-radius: 50% 0 0 50%;
+          }
+          &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 26px;
+            height: 26px;
+            background: #396cf0;
+            top: -17px;
+            border-radius: 50% 50% 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes lds-heart {
+    0% {
+      transform: scale(0.95);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    39% {
+      transform: scale(0.85);
+    }
+    45% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+}
